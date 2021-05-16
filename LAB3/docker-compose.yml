@@ -20,3 +20,9 @@ services:
             MYSQL_ROOT_PASSWORD: test
         networks: 
             - default
+    myadmin:
+        image: phpmyadmin/phpmyadmin
+        ports: 
+            - 8100:80
+        links: 
+            - db:db
